@@ -1,4 +1,4 @@
-FAT IHAH & SOLEHUDDIN — WEDDING WEBSITE V3
+FATIHAH & SOLEHUDDIN — WEDDING WEBSITE V3
 
 APA YANG BARU:
 - Muzik menggunakan video YouTube pilihan anda: NS8U20TsAz4
@@ -20,7 +20,7 @@ SAMBUNG GOOGLE SHEET:
    Who has access: Anyone
 6. Salin URL Web App.
 7. Dalam script.js, ganti:
-   PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_DI_SINI
+   https://www.youtube.com/watch?v=NS8U20TsAz4&list=RDNS8U20TsAz4&start_radio=1
    dengan URL tersebut.
 
 NOTA MUZIK:
