@@ -1,12 +1,27 @@
-FAT IHAH & SOLEHUDDIN — WEDDING WEBSITE
+FAT IHAH & SOLEHUDDIN — WEDDING WEBSITE V3
 
-1. Upload index.html, style.css dan script.js ke root repository GitHub.
-2. Download lagu daripada Pixabay (contoh pautan diberi dalam chat), namakan fail itu music.mp3 dan upload ke root repository.
-3. GitHub Pages akan terus memaparkan website.
-4. Untuk sistem UCAPAN:
-   - Cipta Google Sheet.
-   - Extensions > Apps Script.
-   - Tampal Code.gs.
-   - Deploy sebagai Web App (Execute as Me; access Anyone).
-   - Salin URL Web App dan tampal dalam script.js pada WISH_API_URL.
-   - Semua ucapan akan masuk ke Google Sheet dan hanya anda yang melihat Sheet itu.
+APA YANG BARU:
+- Muzik menggunakan video YouTube pilihan anda: NS8U20TsAz4
+- Sahkan Kehadiran tidak lagi melalui WhatsApp.
+- Tetamu isi terus: Nama + Hadir / Tidak dapat hadir.
+- Kehadiran dan ucapan kedua-duanya masuk ke Google Sheet peribadi anda.
+
+UPLOAD KE GITHUB:
+1. Upload index.html, style.css dan script.js ke root repository.
+2. GitHub Pages akan memaparkan website.
+
+SAMBUNG GOOGLE SHEET:
+1. Cipta Google Sheet baru.
+2. Extensions > Apps Script.
+3. Tampal kandungan Code.gs.
+4. Jalankan setupSheet() sekali dan beri kebenaran.
+5. Deploy > New deployment > Web app.
+   Execute as: Me
+   Who has access: Anyone
+6. Salin URL Web App.
+7. Dalam script.js, ganti:
+   PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_DI_SINI
+   dengan URL tersebut.
+
+NOTA MUZIK:
+Muzik YouTube cuba dimainkan selepas tetamu menekan "BUKA JEMPUTAN". Sesetengah browser boleh menyekat autoplay bersuara; butang muzik di bahagian atas boleh ditekan untuk main/pause.
