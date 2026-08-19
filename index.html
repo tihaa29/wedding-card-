@@ -1,0 +1,3924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+/>
+
+<meta
+name="theme-color"
+content="#9c6670"
+/>
+
+<title>
+Siti Norfatihah & Solehuddin — 19.05.2027
+</title>
+
+
+<!-- GOOGLE FONTS -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+rel="stylesheet"
+>
+
+
+<style>
+
+/* =========================================
+   1. ROOT / RESET
+========================================= */
+
+:root {
+
+    --ivory: #f9f5f2;
+    --cream: #f2e8e3;
+    --blush: #e8c9cc;
+    --soft-pink: #d9aeb4;
+    --dusty-rose: #b87882;
+    --rose-dark: #8f5b65;
+    --wine: #70444c;
+    --text: #765d61;
+    --white: #ffffff;
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    background: var(--ivory);
+    color: var(--text);
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+body.no-scroll {
+
+    overflow: hidden;
+
+}
+
+button,
+input,
+textarea {
+
+    font-family: inherit;
+
+}
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   2. LOADING SCREEN
+========================================= */
+
+#loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(230,190,196,.5),
+            transparent 40%
+        ),
+        var(--ivory);
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+
+}
+
+#loader.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+.loader-inner {
+
+    text-align: center;
+
+}
+
+.loader-monogram {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 80px;
+
+    font-style: italic;
+
+    color: var(--rose-dark);
+
+}
+
+.loader-line {
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--dusty-rose);
+
+    margin: 18px auto;
+
+    animation:
+        loaderLine 1.8s ease forwards;
+
+}
+
+.loader-text {
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+}
+
+@keyframes loaderLine {
+
+    to {
+
+        width: 150px;
+
+    }
+
+}
+
+
+/* =========================================
+   3. OPENING COVER
+========================================= */
+
+.cover {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9000;
+
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(225,169,181,.35),
+            transparent 22%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(222,184,190,.45),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fbf9f7,
+            #f3e6e6
+        );
+
+    transition:
+        transform 1.5s cubic-bezier(.77,0,.18,1);
+
+}
+
+.cover.opened {
+
+    transform: translateY(-100%);
+
+}
+
+.cover-circle {
+
+    position: absolute;
+
+    width: min(80vw, 800px);
+
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    border:
+
+        1px solid
+        rgba(180,110,125,.18);
+
+    animation:
+
+        rotateSlow
+        30s
+        linear
+        infinite;
+
+}
+
+.cover-circle::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 35px;
+
+    border-radius: 50%;
+
+    border:
+
+        1px solid
+        rgba(180,110,125,.12);
+
+}
+
+.cover-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+.cover-arabic {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+
+        clamp(
+            18px,
+            3vw,
+            28px
+        );
+
+    margin-bottom: 30px;
+
+    color: var(--rose-dark);
+
+}
+
+.cover-label {
+
+    font-size: 9px;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+
+}
+
+.cover-names {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    color: var(--rose-dark);
+
+    line-height: .95;
+
+}
+
+.cover-names span {
+
+    display: block;
+
+    font-size:
+
+        clamp(
+            65px,
+            11vw,
+            130px
+        );
+
+}
+
+.cover-and {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 35px;
+
+    margin: 12px 0;
+
+}
+
+.cover-date {
+
+    margin-top: 35px;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+}
+
+.open-invitation {
+
+    margin-top: 45px;
+
+    padding:
+
+        18px
+        38px;
+
+    border:
+
+        1px solid
+        rgba(150,90,100,.55);
+
+    background:
+
+        rgba(255,255,255,.28);
+
+    color: var(--rose-dark);
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: .5s ease;
+
+}
+
+.open-invitation::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -110%;
+
+    width: 100%;
+    height: 100%;
+
+    background: var(--rose-dark);
+
+    transition: .5s ease;
+
+    z-index: -1;
+
+}
+
+.open-invitation:hover {
+
+    color: white;
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+
+        0 18px 40px
+        rgba(110,60,70,.2);
+
+}
+
+.open-invitation:hover::before {
+
+    left: 0;
+
+}
+
+.cover-flower {
+
+    position: absolute;
+
+    font-size: 220px;
+
+    opacity: .05;
+
+    color: var(--rose-dark);
+
+}
+
+.flower-one {
+
+    top: -50px;
+    left: -40px;
+
+}
+
+.flower-two {
+
+    bottom: -80px;
+    right: -30px;
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =========================================
+   4. NAVIGATION
+========================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding:
+
+        18px
+        clamp(20px, 5vw, 70px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+
+        rgba(249,245,242,.72);
+
+    backdrop-filter:
+        blur(15px);
+
+    border-bottom:
+
+        1px solid
+        rgba(180,120,130,.1);
+
+    transform:
+        translateY(-120%);
+
+    transition:
+        .8s ease;
+
+}
+
+.navbar.show {
+
+    transform:
+        translateY(0);
+
+}
+
+.nav-logo {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 32px;
+
+    color: var(--rose-dark);
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+.menu-button {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 22px;
+
+    color: var(--rose-dark);
+
+}
+
+
+/* =========================================
+   5. MAIN HERO
+========================================= */
+
+.main-hero {
+
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(230,183,191,.25),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(214,170,178,.25),
+            transparent 28%
+        ),
+
+        #fbf8f6;
+
+}
+
+.hero-editorial {
+
+    width:
+
+        min(
+            1100px,
+            90%
+        );
+
+    min-height: 75vh;
+
+    display: grid;
+
+    grid-template-columns:
+
+        1fr
+        1.1fr;
+
+    align-items: center;
+
+    border:
+
+        1px solid
+        rgba(180,120,130,.2);
+
+    position: relative;
+
+}
+
+.hero-left {
+
+    padding:
+
+        clamp(
+            50px,
+            8vw,
+            110px
+        );
+
+    position: relative;
+
+}
+
+.hero-right {
+
+    min-height: 75vh;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+            rgba(255,255,255,.15),
+            rgba(255,255,255,.15)
+        ),
+
+        radial-gradient(
+            circle at 50% 40%,
+            #e5c9ce,
+            #c9909a
+        );
+
+    overflow: hidden;
+
+}
+
+.hero-right::before {
+
+    content: "S";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 450px;
+
+    color:
+
+        rgba(255,255,255,.15);
+
+}
+
+.hero-right::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 35px;
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.35);
+
+}
+
+.hero-kicker {
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+
+}
+
+.hero-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+
+        clamp(
+            60px,
+            8vw,
+            110px
+        );
+
+    line-height: .8;
+
+    color: var(--rose-dark);
+
+    font-weight: 500;
+
+}
+
+.hero-title em {
+
+    display: block;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-weight: 400;
+
+    font-size:
+
+        clamp(
+            65px,
+            9vw,
+            130px
+        );
+
+    margin:
+
+        20px
+        0;
+
+}
+
+.hero-description {
+
+    margin-top: 35px;
+
+    max-width: 350px;
+
+    font-size: 11px;
+
+    line-height: 2;
+
+    letter-spacing: 1px;
+
+}
+
+.hero-scroll {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 50px;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+}
+
+.scroll-line {
+
+    width: 60px;
+
+    height: 1px;
+
+    background: var(--dusty-rose);
+
+}
+
+
+/* =========================================
+   6. GENERAL SECTION
+========================================= */
+
+section {
+
+    position: relative;
+
+    padding:
+
+        120px
+        20px;
+
+}
+
+.section-container {
+
+    width:
+
+        min(
+            1050px,
+            100%
+        );
+
+    margin: auto;
+
+}
+
+.section-intro {
+
+    text-align: center;
+
+    margin-bottom: 65px;
+
+}
+
+.eyebrow {
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: var(--dusty-rose);
+
+    margin-bottom: 20px;
+
+}
+
+.section-heading {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+
+        clamp(
+            50px,
+            7vw,
+            90px
+        );
+
+    font-weight: 500;
+
+    color: var(--rose-dark);
+
+    line-height: .9;
+
+}
+
+.section-heading-script {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+
+        clamp(
+            50px,
+            7vw,
+            90px
+        );
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================
+   7. INVITATION
+========================================= */
+
+.invitation-section {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #fffdfb,
+            #f5e9e8
+        );
+
+}
+
+.invitation-card {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding:
+
+        clamp(
+            50px,
+            8vw,
+            100px
+        )
+        35px;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+
+        rgba(255,255,255,.7);
+
+    box-shadow:
+
+        0 35px 90px
+        rgba(110,70,75,.12);
+
+    border:
+
+        1px solid
+        rgba(185,125,135,.35);
+
+}
+
+.invitation-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 14px;
+
+    border:
+
+        1px solid
+        rgba(185,125,135,.18);
+
+}
+
+.invitation-card > * {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.parents {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+
+        clamp(
+            21px,
+            3vw,
+            29px
+        );
+
+    line-height: 1.6;
+
+}
+
+.invite-text {
+
+    margin:
+
+        40px
+        0
+        25px;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    line-height: 2;
+
+    text-transform: uppercase;
+
+}
+
+.invite-names {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+
+        clamp(
+            48px,
+            7vw,
+            85px
+        );
+
+    color: var(--rose-dark);
+
+    line-height: 1.1;
+
+}
+
+.invite-names .amp {
+
+    display: block;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 35px;
+
+}
+
+
+/* =========================================
+   8. LETTER SECTION
+========================================= */
+
+.letter-section {
+
+    background: var(--cream);
+
+}
+
+.letter-wrapper {
+
+    max-width: 780px;
+
+    margin: auto;
+
+}
+
+.envelope {
+
+    background: #fffdfb;
+
+    padding:
+
+        clamp(
+            40px,
+            7vw,
+            80px
+        );
+
+    box-shadow:
+
+        0 30px 80px
+        rgba(100,65,70,.1);
+
+    position: relative;
+
+}
+
+.envelope::before {
+
+    content: "♡";
+
+    position: absolute;
+
+    top: 20px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color: var(--dusty-rose);
+
+}
+
+.letter-text {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+
+        clamp(
+            25px,
+            4vw,
+            42px
+        );
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+}
+
+.letter-signature {
+
+    text-align: center;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 50px;
+
+    color: var(--rose-dark);
+
+    margin-top: 35px;
+
+}
+
+
+/* =========================================
+   9. WEDDING DETAILS
+========================================= */
+
+.details-section {
+
+    background: #fcf9f7;
+
+}
+
+.date-showcase {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 20px;
+
+}
+
+.date-info {
+
+    text-align: center;
+
+    font-size: 10px;
+
+    line-height: 2;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+.big-date {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+
+        clamp(
+            110px,
+            18vw,
+            180px
+        );
+
+    color: var(--rose-dark);
+
+    line-height: .8;
+
+}
+
+.date-divider {
+
+    width: 1px;
+
+    height: 110px;
+
+    background: var(--soft-pink);
+
+}
+
+.details-grid {
+
+    margin-top: 80px;
+
+    display: grid;
+
+    grid-template-columns:
+
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+.detail-card {
+
+    padding:
+
+        45px
+        25px;
+
+    text-align: center;
+
+    border:
+
+        1px solid
+        rgba(180,120,130,.2);
+
+    background: white;
+
+    transition: .5s ease;
+
+}
+
+.detail-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+
+        0 20px 45px
+        rgba(100,60,70,.1);
+
+}
+
+.detail-icon {
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+    color: var(--dusty-rose);
+
+}
+
+.detail-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+    color: var(--rose-dark);
+
+}
+
+.detail-content {
+
+    margin-top: 15px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    line-height: 2;
+
+}
+
+
+/* =========================================
+   10. LOCATION
+========================================= */
+
+.location-section {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #9d6871,
+            #754851
+        );
+
+    color: white;
+
+}
+
+.location-section .eyebrow {
+
+    color: #f1d7db;
+
+}
+
+.location-section .section-heading {
+
+    color: white;
+
+}
+
+.location-layout {
+
+    display: grid;
+
+    grid-template-columns:
+
+        1fr
+        1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+}
+
+.location-description {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+
+        clamp(
+            26px,
+            4vw,
+            42px
+        );
+
+    line-height: 1.4;
+
+}
+
+.location-box {
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.3);
+
+    padding: 50px 35px;
+
+}
+
+.location-name {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 40px;
+
+}
+
+.location-address {
+
+    margin-top: 20px;
+
+    font-size: 10px;
+
+    line-height: 2.2;
+
+    letter-spacing: 2px;
+
+}
+
+.location-button {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding:
+
+        16px
+        30px;
+
+    border:
+
+        1px solid
+        white;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    transition: .4s;
+
+}
+
+.location-button:hover {
+
+    background: white;
+
+    color: var(--rose-dark);
+
+}
+
+
+/* =========================================
+   11. ITINERARY
+========================================= */
+
+.itinerary-section {
+
+    background: var(--ivory);
+
+}
+
+.timeline {
+
+    max-width: 750px;
+
+    margin: auto;
+
+}
+
+.timeline-item {
+
+    display: grid;
+
+    grid-template-columns:
+
+        120px
+        1fr;
+
+    gap: 30px;
+
+    padding:
+
+        30px
+        0;
+
+    border-bottom:
+
+        1px solid
+        rgba(180,120,130,.2);
+
+}
+
+.timeline-time {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--dusty-rose);
+
+}
+
+.timeline-event {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 29px;
+
+    color: var(--rose-dark);
+
+}
+
+
+/* =========================================
+   12. DRESS CODE
+========================================= */
+
+.dress-section {
+
+    background: #f2e6e5;
+
+}
+
+.dress-colours {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    margin-top: 55px;
+
+}
+
+.colour {
+
+    width: 100px;
+
+}
+
+.colour-circle {
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    border:
+
+        8px solid
+        rgba(255,255,255,.55);
+
+    box-shadow:
+
+        0 15px 30px
+        rgba(100,60,70,.1);
+
+}
+
+.colour-name {
+
+    margin-top: 14px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+}
+
+.c1 { background: #f4e9e2; }
+.c2 { background: #d8c3bc; }
+.c3 { background: #b9858d; }
+.c4 { background: #8d6068; }
+.c5 { background: #a89b91; }
+
+
+/* =========================================
+   13. GALLERY
+========================================= */
+
+.gallery-section {
+
+    background: #fffdfb;
+
+}
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+
+        repeat(12, 1fr);
+
+    gap: 15px;
+
+}
+
+.gallery-item {
+
+    min-height: 250px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #efdfe0,
+            #c88e99
+        );
+
+}
+
+.gallery-item::before {
+
+    content: "♡";
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 60px;
+
+    color:
+
+        rgba(255,255,255,.35);
+
+}
+
+.gallery-item:nth-child(1) {
+
+    grid-column: span 7;
+
+    min-height: 420px;
+
+}
+
+.gallery-item:nth-child(2) {
+
+    grid-column: span 5;
+
+}
+
+.gallery-item:nth-child(3) {
+
+    grid-column: span 4;
+
+}
+
+.gallery-item:nth-child(4) {
+
+    grid-column: span 8;
+
+}
+
+
+/* =========================================
+   14. GIFT
+========================================= */
+
+.gift-section {
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(228,190,197,.4),
+            transparent 50%
+        ),
+
+        #f9f5f2;
+
+}
+
+.gift-card {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    padding:
+
+        60px
+        35px;
+
+    background: white;
+
+    text-align: center;
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(110,70,75,.08);
+
+}
+
+.gift-text {
+
+    font-size: 11px;
+
+    line-height: 2;
+
+}
+
+.gift-button {
+
+    margin-top: 30px;
+
+    border: none;
+
+    background: var(--rose-dark);
+
+    color: white;
+
+    padding:
+
+        17px
+        30px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   15. RSVP
+========================================= */
+
+.rsvp-section {
+
+    background: var(--wine);
+
+    color: white;
+
+}
+
+.rsvp-section .section-heading {
+
+    color: white;
+
+}
+
+.rsvp-section .eyebrow {
+
+    color: #e9c7cd;
+
+}
+
+.rsvp-text {
+
+    max-width: 500px;
+
+    margin: auto;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    line-height: 2;
+
+}
+
+.rsvp-open {
+
+    display: block;
+
+    margin:
+
+        40px auto
+        0;
+
+    padding:
+
+        18px
+        38px;
+
+    border:
+
+        1px solid
+        white;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    transition: .4s;
+
+}
+
+.rsvp-open:hover {
+
+    background: white;
+
+    color: var(--wine);
+
+}
+
+
+/* =========================================
+   16. WISHES
+========================================= */
+
+.wishes-section {
+
+    background: #fff;
+
+}
+
+.wishes-form {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    display: grid;
+
+    gap: 15px;
+
+}
+
+.wishes-form input,
+.wishes-form textarea {
+
+    width: 100%;
+
+    padding: 18px;
+
+    border:
+
+        1px solid
+        rgba(180,120,130,.25);
+
+    outline: none;
+
+    background: #fcf9f7;
+
+}
+
+.wishes-form textarea {
+
+    min-height: 130px;
+
+    resize: vertical;
+
+}
+
+.wish-button {
+
+    padding: 18px;
+
+    border: none;
+
+    background: var(--rose-dark);
+
+    color: white;
+
+    letter-spacing: 3px;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   17. FOOTER
+========================================= */
+
+footer {
+
+    padding:
+
+        100px
+        20px;
+
+    text-align: center;
+
+    background: #5f3a41;
+
+    color: white;
+
+}
+
+.footer-names {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+
+        clamp(
+            60px,
+            10vw,
+            120px
+        );
+
+    line-height: .9;
+
+}
+
+.footer-date {
+
+    margin-top: 35px;
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   18. MUSIC BUTTON
+========================================= */
+
+.music-button {
+
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    border:
+
+        1px solid
+        rgba(160,100,110,.3);
+
+    background:
+
+        rgba(255,255,255,.85);
+
+    color: var(--rose-dark);
+
+    z-index: 2000;
+
+    box-shadow:
+
+        0 10px 30px
+        rgba(80,50,55,.12);
+
+}
+
+
+/* =========================================
+   19. RSVP MODAL
+========================================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+
+        rgba(70,40,45,.65);
+
+    backdrop-filter:
+        blur(8px);
+
+}
+
+.modal.active {
+
+    display: flex;
+
+}
+
+.modal-box {
+
+    width:
+
+        min(
+            550px,
+            100%
+        );
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    position: relative;
+
+    background: #fffaf8;
+
+    padding:
+
+        55px
+        30px;
+
+}
+
+.modal-close {
+
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 25px;
+
+    color: var(--rose-dark);
+
+}
+
+.form-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 55px;
+
+    color: var(--rose-dark);
+
+    text-align: center;
+
+}
+
+.rsvp-form {
+
+    margin-top: 35px;
+
+    display: grid;
+
+    gap: 15px;
+
+}
+
+.rsvp-form input,
+.rsvp-form select {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border:
+
+        1px solid
+        rgba(180,120,130,.25);
+
+    background: white;
+
+    outline: none;
+
+}
+
+.submit-rsvp {
+
+    padding: 18px;
+
+    border: none;
+
+    background: var(--rose-dark);
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   20. FLOATING PETALS
+========================================= */
+
+.petals {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    overflow: hidden;
+
+}
+
+.petal {
+
+    position: absolute;
+
+    top: -10vh;
+
+    width: 13px;
+    height: 20px;
+
+    border-radius:
+
+        70% 30%
+        70% 30%;
+
+    background:
+
+        rgba(202,125,140,.2);
+
+    animation:
+
+        fall
+        linear
+        infinite;
+
+}
+
+@keyframes fall {
+
+    0% {
+
+        transform:
+
+            translateY(-10vh)
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+
+            translateY(110vh)
+            rotate(500deg)
+            translateX(100px);
+
+        opacity: 0;
+
+    }
+
+}
+
+@keyframes rotateSlow {
+
+    from {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================
+   21. SCROLL REVEAL
+========================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(45px);
+
+    transition:
+
+        opacity 1s ease,
+        transform 1s ease;
+
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================
+   22. MOBILE
+========================================= */
+
+@media
+(max-width: 750px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+    .menu-button {
+
+        display: block;
+
+    }
+
+    .hero-editorial {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .hero-right {
+
+        min-height: 300px;
+
+        order: -1;
+
+    }
+
+    .hero-left {
+
+        padding:
+            70px
+            30px;
+
+    }
+
+    .hero-right::before {
+
+        font-size: 300px;
+
+    }
+
+    .details-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .location-layout {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 35px;
+
+    }
+
+    .date-showcase {
+
+        gap: 15px;
+
+    }
+
+    .date-divider {
+
+        height: 70px;
+
+    }
+
+    .timeline-item {
+
+        grid-template-columns:
+            85px
+            1fr;
+
+        gap: 15px;
+
+    }
+
+    .gallery-grid {
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4) {
+
+        grid-column: span 1;
+
+        min-height: 220px;
+
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media
+(prefers-reduced-motion: reduce) {
+
+    * {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+
+    }
+
+}
+
+</style>
+</head>
+
+
+<body class="no-scroll">
+
+
+<!-- =====================================
+     LOADER
+===================================== -->
+
+<div id="loader">
+
+    <div class="loader-inner">
+
+        <div class="loader-monogram">
+            S & S
+        </div>
+
+        <div class="loader-line"></div>
+
+        <div class="loader-text">
+            A celebration of love
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================
+     OPENING COVER
+===================================== -->
+
+<div class="cover" id="cover">
+
+    <div class="cover-circle"></div>
+
+    <div class="cover-flower flower-one">
+        ✿
+    </div>
+
+    <div class="cover-flower flower-two">
+        ✿
+    </div>
+
+
+    <div class="cover-content">
+
+        <div class="cover-arabic">
+            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+        </div>
+
+
+        <div class="cover-label">
+            The wedding of
+        </div>
+
+
+        <div class="cover-names">
+
+            <span>
+                Siti Norfatihah
+            </span>
+
+            <div class="cover-and">
+                &
+            </div>
+
+            <span>
+                Solehuddin
+            </span>
+
+        </div>
+
+
+        <div class="cover-date">
+            19 May 2027
+        </div>
+
+
+        <button
+        class="open-invitation"
+        id="openInvitation">
+
+            Open Invitation
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================
+     NAVBAR
+===================================== -->
+
+<nav class="navbar" id="navbar">
+
+    <div class="nav-logo">
+        S & S
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="#invitation">
+            Invitation
+        </a>
+
+        <a href="#details">
+            Details
+        </a>
+
+        <a href="#location">
+            Location
+        </a>
+
+        <a href="#rsvp">
+            RSVP
+        </a>
+
+    </div>
+
+
+    <button class="menu-button">
+        ☰
+    </button>
+
+</nav>
+
+
+
+<!-- FLOATING PETALS -->
+
+<div class="petals" id="petals"></div>
+
+
+
+<!-- =====================================
+     MAIN HERO
+===================================== -->
+
+<section class="main-hero">
+
+    <div class="hero-editorial">
+
+        <div class="hero-left">
+
+            <div class="hero-kicker">
+                A new chapter begins
+            </div>
+
+
+            <h1 class="hero-title">
+
+                Forever
+
+                <em>
+                    starts
+                </em>
+
+                here.
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                With hearts full of love and joy,
+                we invite you to share in the beginning
+                of our forever.
+
+            </p>
+
+
+            <div class="hero-scroll">
+
+                <div class="scroll-line"></div>
+
+                Scroll to begin
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-right"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     INVITATION
+===================================== -->
+
+<section
+id="invitation"
+class="invitation-section">
+
+    <div class="section-container">
+
+        <div class="section-intro reveal">
+
+            <div class="eyebrow">
+                Dengan segala hormatnya
+            </div>
+
+            <h2 class="section-heading">
+                Kami Menjemput Anda
+            </h2>
+
+        </div>
+
+
+        <div class="invitation-card reveal">
+
+            <div class="parents">
+
+                Mohd Noor Bin Ismail
+
+                <br>
+
+                &
+
+                <br>
+
+                Siti Fatimah Bt Mohd Yunus
+
+            </div>
+
+
+            <div class="invite-text">
+
+                Dengan penuh kesyukuran,
+                kami menjemput Dato' | Datin | Tuan | Puan |
+                Encik | Cik ke majlis perkahwinan
+                puteri kami bersama pilihan hatinya
+
+            </div>
+
+
+            <div class="invite-names">
+
+                Siti Norfatihah
+
+                <span class="amp">
+                    &
+                </span>
+
+                Solehuddin
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     LETTER FROM US
+===================================== -->
+
+<section class="letter-section">
+
+    <div class="section-container">
+
+        <div class="section-intro reveal">
+
+            <div class="eyebrow">
+                A little note
+            </div>
+
+            <h2 class="section-heading">
+
+                <span class="section-heading-script">
+                    From
+                </span>
+
+                Our Hearts
+
+            </h2>
+
+        </div>
+
+
+        <div class="letter-wrapper reveal">
+
+            <div class="envelope">
+
+                <div class="letter-text">
+
+                    “Somewhere between the moments,
+                    the laughter, the prayers,
+                    and the little things,
+                    we found a love worth celebrating.
+
+                    And now, as we begin
+                    this beautiful new chapter,
+                    nothing would make us happier
+                    than having you there
+                    to share this moment with us.”
+
+                </div>
+
+
+                <div class="letter-signature">
+
+                    With love,
+                    Siti & Solehuddin
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     WEDDING DETAILS
+===================================== -->
+
+<section
+id="details"
+class="details-section">
+
+    <div class="section-container">
+
+        <div class="section-intro reveal">
+
+            <div class="eyebrow">
+                Save the date
+            </div>
+
+            <h2 class="section-heading">
+                The Celebration
+            </h2>
+
+        </div>
+
+
+        <div class="date-showcase reveal">
+
+            <div class="date-info">
+
+                Wednesday
+
+                <br>
+
+                May
+
+            </div>
+
+
+            <div class="date-divider"></div>
+
+
+            <div class="big-date">
+                19
+            </div>
+
+
+            <div class="date-divider"></div>
+
+
+            <div class="date-info">
+
+                Two Thousand
+
+                <br>
+
+                Twenty Seven
+
+            </div>
+
+        </div>
+
+
+        <div class="details-grid">
+
+            <!-- DATE -->
+
+            <div class="detail-card reveal">
+
+                <div class="detail-icon">
+                    ✦
+                </div>
+
+                <div class="detail-title">
+                    Date
+                </div>
+
+                <div class="detail-content">
+
+                    19 MAY 2027
+
+                    <br>
+
+                    WEDNESDAY
+
+                </div>
+
+            </div>
+
+
+            <!-- TIME -->
+
+            <div class="detail-card reveal">
+
+                <div class="detail-icon">
+                    ◷
+                </div>
+
+                <div class="detail-title">
+                    Time
+                </div>
+
+                <div class="detail-content">
+
+                    INSERT TIME HERE
+
+                    <br>
+
+                    MAJLIS PERKAHWINAN
+
+                </div>
+
+            </div>
+
+
+            <!-- VENUE -->
+
+            <div class="detail-card reveal">
+
+                <div class="detail-icon">
+                    ♡
+                </div>
+
+                <div class="detail-title">
+                    Venue
+                </div>
+
+                <div class="detail-content">
+
+                    CASA AMLIN HOMESTAY
+
+                    <br>
+
+                    MACHANG, KELANTAN
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     LOCATION
+===================================== -->
+
+<section
+id="location"
+class="location-section">
+
+    <div class="section-container">
+
+        <div class="location-layout">
+
+            <div class="reveal">
+
+                <div class="eyebrow">
+                    Find your way
+                </div>
+
+                <h2 class="section-heading">
+
+                    A Place Where
+
+                    <span class="section-heading-script">
+                        Memories
+                    </span>
+
+                    Begin
+
+                </h2>
+
+
+                <p class="location-description">
+
+                    We cannot wait to welcome you
+                    and celebrate this beautiful
+                    beginning together.
+
+                </p>
+
+            </div>
+
+
+            <div class="location-box reveal">
+
+                <div class="location-name">
+
+                    Casa Amlin Homestay
+
+                </div>
+
+
+                <div class="location-address">
+
+                    MACHANG, KELANTAN
+
+                    <br><br>
+
+                    Please join us as we gather
+                    with our loved ones to celebrate
+                    this beautiful union.
+
+                </div>
+
+
+                <!-- TUKAR LINK GOOGLE MAPS -->
+
+                <a
+                href="https://maps.google.com"
+                target="_blank"
+                class="location-button">
+
+                    Open Google Maps
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     ITINERARY
+===================================== -->
+
+<section class="itinerary-section">
+
+    <div class="section-container">
+
+        <div class="section-intro reveal">
+
+            <div class="eyebrow">
+                The programme
+            </div>
+
+            <h2 class="section-heading">
+                Atur Cara Majlis
+            </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <!-- TUKAR MASA KAT SINI -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-time">
+                    11:00 AM
+                </div>
+
+                <div class="timeline-event">
+                    Ketibaan Para Tetamu
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-time">
+                    12:00 PM
+                </div>
+
+                <div class="timeline-event">
+                    Ketibaan Pengantin
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-time">
+                    12:30 PM
+                </div>
+
+                <div class="timeline-event">
+                    Jamuan Makan
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-time">
+                    04:00 PM
+                </div>
+
+                <div class="timeline-event">
+                    Majlis Bersurai
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     DRESS CODE
+===================================== -->
+
+<section class="dress-section">
+
+    <div class="section-container">
+
+        <div class="section-intro reveal">
+
+            <div class="eyebrow">
+                Optional dress palette
+            </div>
+
+            <h2 class="section-heading">
+
+                Dress
+
+                <span class="section-heading-script">
+                    Beautifully
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="dress-colours reveal">
+
+            <div class="colour">
+
+                <div class="colour-circle c1"></div>
+
+                <div class="colour-name">
+                    Ivory
+                </div>
+
+            </div>
+
+
+            <div class="colour">
+
+                <div class="colour-circle c2"></div>
+
+                <div class="colour-name">
+                    Taupe
+                </div>
+
+            </div>
+
+
+            <div class="colour">
+
+                <div class="colour-circle c3"></div>
+
+                <div class="colour-name">
+                    Dusty Rose
+                </div>
+
+            </div>
+
+
+            <div class="colour">
+
+                <div class="colour-circle c4"></div>
+
+                <div class="colour-name">
+                    Mauve
+                </div>
+
+            </div>
+
+
+            <div class="colour">
+
+                <div class="colour-circle c5"></div>
+
+                <div class="colour-name">
+                    Soft Grey
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     GALLERY
+     BOLEH MASUK GAMBAR KEMUDIAN
+===================================== -->
+
+<section class="gallery-section">
+
+    <div class="section-container">
+
+        <div class="section-intro reveal">
+
+            <div class="eyebrow">
+                Our little moments
+            </div>
+
+            <h2 class="section-heading">
+
+                A Love
+
+                <span class="section-heading-script">
+                    In Frames
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="gallery-grid reveal">
+
+            <!--
+            NANTI BOLEH MASUKKAN GAMBAR
+            GUNA BACKGROUND IMAGE
+            ATAU IMG TAG
+            -->
+
+            <div class="gallery-item"></div>
+
+            <div class="gallery-item"></div>
+
+            <div class="gallery-item"></div>
+
+            <div class="gallery-item"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     GIFT
+===================================== -->
+
+<section class="gift-section">
+
+    <div class="section-container">
+
+        <div class="section-intro reveal">
+
+            <div class="eyebrow">
+                With gratitude
+            </div>
+
+            <h2 class="section-heading">
+
+                Your Presence Is
+
+                <span class="section-heading-script">
+                    Our Present
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="gift-card reveal">
+
+            <p class="gift-text">
+
+                Your love, prayers and presence
+                are truly the greatest gifts
+                we could ever ask for.
+
+                <br><br>
+
+                For those who have kindly expressed
+                their wish to honour us with a gift,
+                details may be found below.
+
+            </p>
+
+
+            <button class="gift-button">
+
+                Wedding Gift Details
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     RSVP
+===================================== -->
+
+<section
+id="rsvp"
+class="rsvp-section">
+
+    <div class="section-container">
+
+        <div class="section-intro reveal">
+
+            <div class="eyebrow">
+                Kindly respond
+            </div>
+
+            <h2 class="section-heading">
+                RSVP
+            </h2>
+
+        </div>
+
+
+        <p class="rsvp-text reveal">
+
+            Your presence would mean
+            the world to us.
+
+            <br><br>
+
+            Kindly let us know
+            if you will be joining
+            our special celebration.
+
+        </p>
+
+
+        <button
+        class="rsvp-open reveal"
+        id="openRsvp">
+
+            Confirm Attendance
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     WISHES
+===================================== -->
+
+<section class="wishes-section">
+
+    <div class="section-container">
+
+        <div class="section-intro reveal">
+
+            <div class="eyebrow">
+                Leave a little love
+            </div>
+
+            <h2 class="section-heading">
+
+                Wedding
+
+                <span class="section-heading-script">
+                    Wishes
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <form
+        class="wishes-form reveal"
+        id="wishesForm">
+
+            <input
+            type="text"
+            placeholder="Your Name"
+            required
+            >
+
+            <textarea
+            placeholder="Leave your wishes for the couple..."
+            required
+            ></textarea>
+
+            <button
+            type="submit"
+            class="wish-button">
+
+                Send Your Wishes
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+    <div class="footer-names">
+
+        Siti Norfatihah
+
+        <br>
+
+        &
+
+        <br>
+
+        Solehuddin
+
+    </div>
+
+
+    <div class="footer-date">
+
+        19 May 2027
+
+        <br><br>
+
+        Thank you for being part
+        of our love story
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================
+     MUSIC BUTTON
+===================================== -->
+
+<button
+class="music-button"
+id="musicButton">
+
+    ♫
+
+</button>
+
+
+<audio
+id="backgroundMusic"
+loop>
+
+    <!--
+
+    NANTI MASUKKAN:
+
+    <source
+    src="music.mp3"
+    type="audio/mpeg"
+    >
+
+    -->
+
+</audio>
+
+
+
+<!-- =====================================
+     RSVP MODAL
+===================================== -->
+
+<div
+class="modal"
+id="rsvpModal">
+
+    <div class="modal-box">
+
+        <button
+        class="modal-close"
+        id="closeRsvp">
+
+            ×
+
+        </button>
+
+
+        <h2 class="form-title">
+
+            RSVP
+
+        </h2>
+
+
+        <form
+        class="rsvp-form"
+        id="rsvpForm">
+
+            <input
+            type="text"
+            id="guestName"
+            placeholder="Full Name"
+            required
+            >
+
+
+            <input
+            type="tel"
+            id="guestPhone"
+            placeholder="Phone Number"
+            required
+            >
+
+
+            <select
+            id="attendance"
+            required>
+
+                <option value="">
+                    Will you be attending?
+                </option>
+
+                <option value="Yes, I will attend">
+                    Yes, I will attend ♡
+                </option>
+
+                <option value="Sorry, I cannot attend">
+                    Sorry, I cannot attend
+                </option>
+
+            </select>
+
+
+            <input
+            type="number"
+            id="guestPax"
+            placeholder="Number of Guests"
+            min="1"
+            max="10"
+            >
+
+
+            <button
+            type="submit"
+            class="submit-rsvp">
+
+                Submit RSVP
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+
+/* =========================================
+   LOADER
+========================================= */
+
+window.addEventListener(
+    "load",
+    function () {
+
+        setTimeout(
+            function () {
+
+                document
+                .getElementById("loader")
+                .classList
+                .add("hide");
+
+            },
+            1800
+        );
+
+    }
+);
+
+
+/* =========================================
+   OPEN INVITATION
+========================================= */
+
+const openInvitation =
+document.getElementById(
+    "openInvitation"
+);
+
+const cover =
+document.getElementById(
+    "cover"
+);
+
+const navbar =
+document.getElementById(
+    "navbar"
+);
+
+
+openInvitation.addEventListener(
+    "click",
+    function () {
+
+        cover
+        .classList
+        .add("opened");
+
+
+        navbar
+        .classList
+        .add("show");
+
+
+        document
+        .body
+        .classList
+        .remove("no-scroll");
+
+
+        setTimeout(
+            function () {
+
+                document
+                .querySelector(".main-hero")
+                .scrollIntoView({
+
+                    behavior:
+                        "smooth"
+
+                });
+
+            },
+            500
+        );
+
+    }
+);
+
+
+/* =========================================
+   FLOATING PETALS
+========================================= */
+
+const petals =
+document.getElementById(
+    "petals"
+);
+
+
+for (
+    let i = 0;
+    i < 18;
+    i++
+) {
+
+    const petal =
+    document.createElement(
+        "div"
+    );
+
+    petal.className =
+    "petal";
+
+
+    petal.style.left =
+    Math.random() * 100
+    + "%";
+
+
+    petal.style.animationDuration =
+    10 + Math.random() * 15
+    + "s";
+
+
+    petal.style.animationDelay =
+    Math.random() * 10
+    + "s";
+
+
+    petal.style.opacity =
+    0.15 + Math.random() * .35;
+
+
+    petal.style.transform =
+    "scale("
+    + (
+        .5
+        + Math.random()
+    )
+    + ")";
+
+
+    petals.appendChild(
+        petal
+    );
+
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const revealElements =
+document.querySelectorAll(
+    ".reveal"
+);
+
+
+const revealObserver =
+new IntersectionObserver(
+
+    function (
+        entries
+    ) {
+
+        entries.forEach(
+
+            function (
+                entry
+            ) {
+
+                if (
+                    entry.isIntersecting
+                ) {
+
+                    entry.target
+                    .classList
+                    .add("active");
+
+                }
+
+            }
+
+        );
+
+    },
+
+    {
+
+        threshold: .12
+
+    }
+
+);
+
+
+revealElements.forEach(
+
+    function (
+        element
+    ) {
+
+        revealObserver
+        .observe(
+            element
+        );
+
+    }
+
+);
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+const music =
+document.getElementById(
+    "backgroundMusic"
+);
+
+const musicButton =
+document.getElementById(
+    "musicButton"
+);
+
+
+musicButton.addEventListener(
+    "click",
+    function () {
+
+        if (
+            !music.querySelector("source")
+        ) {
+
+            alert(
+                "Add your music file first."
+            );
+
+            return;
+
+        }
+
+
+        if (
+            music.paused
+        ) {
+
+            music.play();
+
+            musicButton.innerHTML =
+            "❚❚";
+
+        }
+
+        else {
+
+            music.pause();
+
+            musicButton.innerHTML =
+            "♫";
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   RSVP MODAL
+========================================= */
+
+const openRsvp =
+document.getElementById(
+    "openRsvp"
+);
+
+const rsvpModal =
+document.getElementById(
+    "rsvpModal"
+);
+
+const closeRsvp =
+document.getElementById(
+    "closeRsvp"
+);
+
+
+openRsvp.addEventListener(
+    "click",
+    function () {
+
+        rsvpModal
+        .classList
+        .add("active");
+
+    }
+);
+
+
+closeRsvp.addEventListener(
+    "click",
+    function () {
+
+        rsvpModal
+        .classList
+        .remove("active");
+
+    }
+);
+
+
+rsvpModal.addEventListener(
+    "click",
+    function (
+        event
+    ) {
+
+        if (
+            event.target ===
+            rsvpModal
+        ) {
+
+            rsvpModal
+            .classList
+            .remove("active");
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   RSVP SUBMIT
+========================================= */
+
+const rsvpForm =
+document.getElementById(
+    "rsvpForm"
+);
+
+
+rsvpForm.addEventListener(
+    "submit",
+    function (
+        event
+    ) {
+
+        event.preventDefault();
+
+
+        const name =
+        document
+        .getElementById(
+            "guestName"
+        )
+        .value;
+
+
+        const attendance =
+        document
+        .getElementById(
+            "attendance"
+        )
+        .value;
+
+
+        alert(
+
+            "Thank you, "
+            + name
+            + "! Your RSVP has been received. ♡"
+
+        );
+
+
+        rsvpForm.reset();
+
+
+        rsvpModal
+        .classList
+        .remove("active");
+
+    }
+);
+
+
+/* =========================================
+   WEDDING WISHES
+========================================= */
+
+const wishesForm =
+document.getElementById(
+    "wishesForm"
+);
+
+
+wishesForm.addEventListener(
+    "submit",
+    function (
+        event
+    ) {
+
+        event.preventDefault();
+
+
+        alert(
+
+            "Thank you for your beautiful wishes! ♡"
+
+        );
+
+
+        wishesForm.reset();
+
+    }
+);
+
+
+/* =========================================
+   NAVBAR SHADOW
+========================================= */
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        if (
+            window.scrollY > 100
+        ) {
+
+            navbar.style.boxShadow =
+            "0 10px 30px rgba(80,50,55,.08)";
+
+        }
+
+        else {
+
+            navbar.style.boxShadow =
+            "none";
+
+        }
+
+    }
+);
+
+
+</script>
+
+</body>
+</html>
